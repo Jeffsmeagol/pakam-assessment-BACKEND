@@ -17,6 +17,7 @@ const MONGO_URI =
 app.use(cors());
 app.use(express.json());
 
+mongoose.set("strictQuery", false);
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(MONGO_URI);
