@@ -9,7 +9,7 @@ import loginRoute from "./routes/loginRoute";
 import authMiddleware from "./middleware/authMiddleware";
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 const MONGO_URI =
   process.env.MONGO_URI ||
   "mongodb+srv://adebowalejeff:M6VsLsqiOddr3gmf@cluster0.kemjulm.mongodb.net/pakam?retryWrites=true&w=majority";
