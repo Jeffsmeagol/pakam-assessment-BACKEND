@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "types": ["node", "express" /* other types */],
-    "typeRoots": ["./typings", "./node_modules/@types"],
+    "typeRoots": ["src/typings", "./node_modules/@types"],
     "target": "es6",
     "module": "commonjs",
     "outDir": "./dist",
@@ -17,6 +17,6 @@
     "emitDecoratorMetadata": true,
     
   },
-  "include": ["src/**/*.ts", "typings/express.d.ts"],
+  "include": ["src/**/*.ts", "src/typings/express.d.ts"],
   "exclude": ["node_modules"]
 }
