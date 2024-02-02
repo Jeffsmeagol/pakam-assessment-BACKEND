@@ -18,7 +18,7 @@ export default function authMiddleware(
   const [bearer, token] = authorizationHeader.split(" ");
   if (bearer.toLowerCase() !== "bearer" || !token) {
     return res
-      .status(401)
+      .status(402)
       .json({ message: "Invalid Authorization header format" });
   }
 
@@ -26,7 +26,7 @@ export default function authMiddleware(
   if (jwtSecret !== undefined) {
     // Now, you can safely use jwtSecret without TypeScript complaining
     jwt.verify(token, jwtSecret, (err, user) => {
-      if (err) return res.status(403);
+      if (err) return res.status(403).json({message: 'Wrong Token'});
       req.user = user;
       next();
     });
